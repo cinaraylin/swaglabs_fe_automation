@@ -1,0 +1,1 @@
+export const sortStringListDesc = (stringList) => stringList.sort().reverse()
