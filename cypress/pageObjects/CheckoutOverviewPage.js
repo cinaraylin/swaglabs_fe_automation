@@ -38,4 +38,43 @@ export class CheckoutOverviewPage {
     static getFinishButton() {
         return cy.getBySel('finish')
     }
+
+    
+    /****** OPERATIONAL METHODS  ******/
+    
+    static verifyInventoryNameIs(expectedName) {
+        this.getInventoryItemName().should('have.text', expectedName)
+    }
+
+    static verifyInventoryDescriptionIs(expectedDesc) {
+        this.getInventoryItemDescription().should('have.text', expectedDesc)
+    }
+
+    static verifyInventoryPriceIs(expectedPrice) {
+        this.getInventoryItemPrice().should('have.text', expectedPrice)
+    }
+
+    static verifyPaymentInformationIs(expectedPayment) {
+        this.getPaymentInformation().should('have.text', expectedPayment)
+    }
+
+    static verifyShippingInformationIs(expectedShipping) {
+        this.getShippingInformation().should('have.text', expectedShipping)
+    }
+
+    static verifySubTotalLabelIs(expectedSubTotal) {
+        this.getSubTotalLabel().should('have.text', expectedSubTotal)
+    }
+
+    static verifyTaxLabelIs(expectedTax) {
+        this.getTaxLabel().should('have.text', expectedTax)
+    }
+
+    static verifyTotalLabelIs(expectedTotal) {
+        this.getTotalLabel().should('have.text', expectedTotal)
+    }
+
+    static clickFinishButton() {
+        this.getFinishButton().click()
+    }
 }

@@ -15,4 +15,11 @@ export class LoginPage {
     static getErrorMessageElement() {
         return cy.getBySel('error')
     }
+
+
+    /****** OPERATIONAL METHODS  ******/
+    
+    static verifyErrorMessageDisplayedAs(expectedErrorMessage) {
+        this.getErrorMessageElement().should('have.text', expectedErrorMessage)
+    }
 }

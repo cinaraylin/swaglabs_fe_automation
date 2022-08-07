@@ -28,4 +28,31 @@ export class CartPage {
     static getRemoveButton() {
         return cy.contains('button', BUTTON_LABELS.REMOVE)
     }
+
+    
+    /****** OPERATIONAL METHODS  ******/
+    
+    static verifyItemCountInCartIs(expectedCount) {
+        this.getCartItems().should('have.length', expectedCount)
+    }
+
+    static verifyInventoryNameIs(expectedName) {
+        this.getInventoryItemName().should('have.text', expectedName)
+    }
+
+    static verifyInventoryDescriptionIs(expectedDesc) {
+        this.getInventoryItemDescription().should('have.text', expectedDesc)
+    }
+
+    static verifyInventoryPriceIs(expectedPrice) {
+        this.getInventoryItemPrice().should('have.text', expectedPrice)
+    }
+     
+    static clickRemoveButton() {
+        this.getRemoveButton().click()
+    }
+
+    static clickCheckoutButton() {
+        this.getCheckoutButton().click()
+    }
 }
