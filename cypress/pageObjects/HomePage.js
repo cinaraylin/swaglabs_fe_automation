@@ -67,7 +67,7 @@ export class HomePage {
             nameList.push(item.text())
         }).then(() => {
             const nameListSortedDesc = sortStringListDesc([...nameList])
-            expect(JSON.stringify(nameList)).to.eq(JSON.stringify(nameListSortedDesc))
+            expect(JSON.stringify(nameList), "items sorted by name descending").to.eq(JSON.stringify(nameListSortedDesc))
         })
     }
 

@@ -12,7 +12,7 @@ import { LoginPage } from "../pageObjects/LoginPage"
 import { calculateTax, loginAs, convertPriceToNumber, calculateTotalPrice } from "../utils"
 import { InventoryDetail } from "../pageObjects/InventoryDetail"
 
-describe('example to-do app', () => {
+describe('swag lab automation suite', () => {
     beforeEach(() => {
         cy.visit('/')
     })
